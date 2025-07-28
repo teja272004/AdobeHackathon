@@ -1,14 +1,15 @@
+# Use official lightweight Python image
 FROM python:3.10-slim
 
+# Set the working directory
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    libglib2.0-0 libgl1-mesa-glx libxrender1 libsm6 libxext6 \
-    && rm -rf /var/lib/apt/lists/*
-
+# Install dependencies
 COPY requirements.txt .
-COPY 1a.py .
-
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "1a.py"]
+# Copy your script and any other files (e.g. input.pdf)
+COPY . .
+
+# Command to run the script
+CMD ["python", "extractor.py"]
