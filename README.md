@@ -1,4 +1,4 @@
-```markdown
+
 # 🧠 PDF Heading Structure Extractor (Adobe Hackathon Submission - 1a)
 
 This Python tool extracts the title and section-wise headings (H1, H2, H3...) from a PDF file by analyzing text characteristics like font size, word count, and punctuation. It outputs the structured outline in JSON format.
@@ -13,6 +13,7 @@ AdobeHackathon/1a/
 ├── extractor.py         # Main Python script
 ├── Dockerfile           # Docker setup for containerized execution
 ├── requirements.txt     # Python dependencies
+├── input.pdf
 
 ````
 
@@ -103,6 +104,3 @@ Console output will show a structured JSON like:
         }
     ]
 }
-
----
-```
