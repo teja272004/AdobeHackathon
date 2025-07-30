@@ -32,7 +32,7 @@ You can run the project in two ways:
 From inside the `1a/` folder:
 
 ```bash
-docker build -t pdf-extractor .
+docker build -t pdf-extractor-image .
 ````
 
 ### ✅ Step 2: Run the container
@@ -42,13 +42,13 @@ Make sure your input PDF (e.g., `input.pdf`) is in the same folder. Then run:
 **On Linux/macOS:**
 
 ```bash
-docker run --rm -v $(pwd):/app pdf-extractor
+docker run --rm -v $(pwd):/app pdf-extractor-image
 ```
 
 **On Windows (CMD):**
 
 ```cmd
-docker run --rm -v %cd%:/app pdf-extractor
+docker run --rm -v %cd%:/app pdf-extractor-image
 ```
 
 ---
